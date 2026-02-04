@@ -22,7 +22,7 @@
     "access": "public"
   },
   "scripts": {
-    "build": "tsup",
+    "build": "tsup && tsc -p tsconfig.build.json",
     "dev": "tsup --watch",
     "lint": "eslint .",
     "type-check": "tsc --noEmit",
