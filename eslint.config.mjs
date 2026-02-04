@@ -21,6 +21,7 @@ export default tseslint.config(
         typescript: {
           alwaysTryTypes: true,
           project: ['packages/*/tsconfig.json', 'apps/*/tsconfig.json'],
+          noWarnOnMultipleProjects: true, // suppress monorepo multi-tsconfig warning
         },
       },
     },
