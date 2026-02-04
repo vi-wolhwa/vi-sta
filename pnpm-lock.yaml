@@ -70,6 +70,12 @@ importers:
 
   packages/core: {}
 
+  packages/presets:
+    dependencies:
+      '@vi-sta/core':
+        specifier: workspace:*
+        version: link:../core
+
   packages/react:
     dependencies:
       '@vi-sta/core':
