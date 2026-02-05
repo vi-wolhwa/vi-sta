@@ -1,6 +1,19 @@
 packages:
   - 'packages/*'
   - 'apps/*'
-allowBuilds:
-  esbuild: false
-  unrs-resolver: false
+
+# Single source of truth for Tiptap versions across all packages.
+# Keeping every @tiptap/* dependency on one version guarantees a single
+# ProseMirror (@tiptap/pm) instance, which the editor requires to function.
+catalog:
+  '@tiptap/core': ^3.24.0
+  '@tiptap/pm': ^3.24.0
+  '@tiptap/extensions': ^3.24.0
+  '@tiptap/extension-document': ^3.24.0
+  '@tiptap/extension-paragraph': ^3.24.0
+  '@tiptap/extension-text': ^3.24.0
+  '@tiptap/extension-heading': ^3.24.0
+  '@tiptap/extension-bold': ^3.24.0
+  '@tiptap/extension-italic': ^3.24.0
+  '@tiptap/extension-hard-break': ^3.24.0
+  '@tiptap/react': ^3.24.0
