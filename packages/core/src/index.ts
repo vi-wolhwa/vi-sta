@@ -1,7 +1,9 @@
-/**
- * @vi-sta/core — framework-agnostic editor engine.
- *
- * The public API (schema, keyword engine, serializer, view controllers)
- * lands from M1 onward. This is the M0 scaffold entry point.
- */
-export const version = '0.0.0';
+export { createVistaExtensions } from './schema/extensions';
+export type { VistaSchemaOptions, VistaHeadingLevel } from './schema/extensions';
+
+export { createVistaEditor } from './editor/create-editor';
+export type { VistaEditorOptions } from './editor/types';
+
+// Re-export the Tiptap types consumers need, so they can type against vi-sta
+// without taking a direct dependency on @tiptap/core.
+export type { Editor, Content, FocusPosition, JSONContent } from '@tiptap/core';
