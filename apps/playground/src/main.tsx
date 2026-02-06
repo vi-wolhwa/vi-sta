@@ -1,7 +1,9 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 
-const App = () => <h1>vi-sta playground</h1>;
+import { App } from './app';
+
+import './styles.css';
 
 const rootElement = document.getElementById('root');
 if (!rootElement) {

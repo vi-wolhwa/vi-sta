@@ -1,0 +1,112 @@
+/* apps/playground/src/styles.css */
+:root {
+  --pg-border: #d4d4d8;
+  --pg-accent: #4f46e5;
+  --pg-surface: #ffffff;
+  --pg-fg: #18181b;
+  --pg-muted: #71717a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family:
+    system-ui,
+    -apple-system,
+    'Segoe UI',
+    sans-serif;
+  color: var(--pg-fg);
+  background: #f4f4f5;
+}
+
+.playground {
+  max-width: 720px;
+  margin: 48px auto;
+  padding: 0 16px;
+}
+
+.playground__eyebrow {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--pg-muted);
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  padding: 8px;
+  border: 1px solid var(--pg-border);
+  border-bottom: none;
+  border-radius: 8px 8px 0 0;
+  background: #fafafa;
+}
+
+.toolbar__button {
+  padding: 6px 10px;
+  font-size: 13px;
+  border: 1px solid var(--pg-border);
+  border-radius: 6px;
+  background: var(--pg-surface);
+  cursor: pointer;
+}
+
+.toolbar__button:hover:not(:disabled) {
+  border-color: var(--pg-accent);
+}
+
+.toolbar__button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.toolbar__button--active {
+  border-color: var(--pg-accent);
+  background: var(--pg-accent);
+  color: #ffffff;
+}
+
+.toolbar__divider {
+  width: 1px;
+  align-self: stretch;
+  margin: 0 4px;
+  background: var(--pg-border);
+}
+
+.playground__editor {
+  border: 1px solid var(--pg-border);
+  border-radius: 0 0 8px 8px;
+  background: var(--pg-surface);
+}
+
+.playground__editor .ProseMirror {
+  min-height: 240px;
+  padding: 16px;
+  outline: none;
+}
+
+.playground__editor h1 {
+  font-size: 1.75rem;
+  margin: 0.4em 0;
+}
+
+.playground__editor h2 {
+  font-size: 1.4rem;
+  margin: 0.4em 0;
+}
+
+.playground__editor h3 {
+  font-size: 1.2rem;
+  margin: 0.4em 0;
+}
+
+.playground__editor p {
+  margin: 0.5em 0;
+  line-height: 1.6;
+}
