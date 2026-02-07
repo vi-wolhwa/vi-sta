@@ -2,6 +2,10 @@ packages:
   - 'packages/*'
   - 'apps/*'
 
+onlyBuiltDependencies:
+  - esbuild
+  - unrs-resolver
+
 # Single source of truth for Tiptap versions across all packages.
 # Keeping every @tiptap/* dependency on one version guarantees a single
 # ProseMirror (@tiptap/pm) instance, which the editor requires to function.
