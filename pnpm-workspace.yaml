@@ -2,9 +2,9 @@ packages:
   - 'packages/*'
   - 'apps/*'
 
-onlyBuiltDependencies:
-  - esbuild
-  - unrs-resolver
+allowBuilds:
+  esbuild: true
+  unrs-resolver: true
 
 # Single source of truth for Tiptap versions across all packages.
 # Keeping every @tiptap/* dependency on one version guarantees a single
