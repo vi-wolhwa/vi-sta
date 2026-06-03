@@ -37,9 +37,31 @@ Run the demo app:
 pnpm --filter playground dev
 ```
 
+## Usage
+
+```tsx
+import { useVistaEditor, StyledView } from '@vi-sta/react';
+
+const MyEditor = () => {
+  const editor = useVistaEditor({
+    content: '<p>Hello, <strong>vi-sta</strong>!</p>',
+    // Enable when surrounding UI (e.g. a toolbar) must reflect editor state.
+    shouldRerenderOnTransaction: true,
+  });
+
+  return <StyledView editor={editor} className="my-editor" />;
+};
+```
+
+`StyledView` is headless and ships no styles. Style the editor by targeting the
+`.ProseMirror` element inside your container.
+
 ## Status
 
-Early development. See the milestone roadmap (M0–M10) in the design document.
+Early development. The Styled (WYSIWYG) view is available as of milestone **M1**:
+a baseline schema (paragraphs, headings, bold, italic, hard breaks) with
+undo/redo. Serialization, the keyword engine, and the remaining views follow in
+later milestones (M2–M10).
 
 ## License
 

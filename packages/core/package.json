@@ -27,5 +27,17 @@
     "lint": "eslint .",
     "type-check": "tsc --noEmit",
     "test": "vitest run"
+  },
+  "dependencies": {
+    "@tiptap/core": "catalog:",
+    "@tiptap/pm": "catalog:",
+    "@tiptap/extensions": "catalog:",
+    "@tiptap/extension-document": "catalog:",
+    "@tiptap/extension-paragraph": "catalog:",
+    "@tiptap/extension-text": "catalog:",
+    "@tiptap/extension-heading": "catalog:",
+    "@tiptap/extension-bold": "catalog:",
+    "@tiptap/extension-italic": "catalog:",
+    "@tiptap/extension-hard-break": "catalog:"
   }
 }
